@@ -1,43 +1,4 @@
-Ran search for app.py in workspace
-Ran search for fraud directory in ADARSH KUMAR DUBEY · Exited with code 1
 
-### 🔍 Root Cause of the Error
-
-In your Streamlit Cloud logs:
-```text
-File "/mount/src/credit-card-fraud-detectior/app.py", line 1
-    ```python
-    ^
-SyntaxError: invalid syntax
-```
-
-**Why this happened:**
-When copying the code into GitHub, the markdown code block wrapper (` ```python ` on line 1 and ` ``` ` on the last line) was included inside `app.py`. In Python, backticks at the beginning of a file are invalid syntax.
-
-**Fix:** In GitHub, ensure that **line 1 starts directly with Python code** (no ` ```python `).
-
----
-
-### Additional Fixes Included in this Build:
-1. **Streamlit 1.67+ Compatibility**: Replaced the deprecated `use_container_width=True` with a backward-compatible adapter that uses `width="stretch"` on Streamlit ≥ 1.67 and falls back to `use_container_width=True` on older versions (eliminating all deprecation warnings in your logs).
-2. **Scikit-Learn Version Compatibility**: Silenced `InconsistentVersionWarning` when unpickling `rf_model.joblib` across scikit-learn versions (1.6.1 → 1.9.1).
-3. **Missing `openpyxl` Safety Guard**: Wrapped Excel export in a safe fallback so that if `openpyxl` is missing from `requirements.txt`, the app still runs smoothly and allows CSV / JSON downloads without crashing.
-
-Here is the complete, production-ready `app.py`:
-
-```python
-"""
-====================================================================================================
-PROJECT: CREDIT CARD FRAUD DETECTION SYSTEM (ENTERPRISE FINTECH SAAS EDITION)
-FILE: app.py
-AUTHOR: Adarsh Kumar Dubey
-DEGREE: B.Tech CSE (Cloud Computing)
-INSTITUTION: Bennett University
-====================================================================================================
-A complete, self-contained, production-grade Streamlit application engineered for high-throughput
-transaction anomaly surveillance, risk intelligence scoring, and interactive model diagnostics.
-====================================================================================================
-"""
 
 import os
 import sys
