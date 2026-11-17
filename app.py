@@ -1769,9 +1769,9 @@ st.markdown(
         <div style="margin-bottom: 8px;">
             <span style="font-size:0.8rem; color:#64748b; text-transform:uppercase; letter-spacing:0.12em; font-weight:700;">System Architect & Chief Engineer</span>
         </div>
-        <div class="footer-dev-name">Adarsh Kumar Dubey</div>
+        <div class="footer-dev-name">Adarsh Kumar Dubey,Aryan singh,Astitva malik</div>
         <div style="font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
-            <b>B.Tech CSE (Cloud Computing)</b> &bull; <b>Bennett University</b>
+            <b>B.Tech CSE </b> &bull; <b>Bennett University</b>
         </div>
         <div style="display:flex; justify-content:center; gap:8px; margin-top:16px; flex-wrap:wrap;">
             <span class="badge badge-cyan">Streamlit Enterprise</span>
